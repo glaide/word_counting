@@ -1,0 +1,13 @@
+{% block title %}Enter your words here, and we will count how many words are in your phrase {% endblock %}
+{% block content %}
+<h2>Your words</h2>
+<form method="GET">
+    <table>
+        {{ form }}
+    </table>
+    {% csrf_token %}
+    <button type="submit">Count</button>
+</form>
+
+<p>The total number of words is: {{message}}</p>
+{% endblock %}
